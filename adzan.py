@@ -15,7 +15,7 @@ from . import *
 async def get_adzan(adzan):
     "Shows you the Islamic prayer times of the given city name"
     input_str = adzan.pattern_match.group(1)
-    LOKASI = gvarstatus("WEATHER_DEFCITY") or "Jakarta" if not input_str else input_str
+    LOKASI = "Jakarta" if not input_str else input_str
     url = f"http://muslimsalat.com/{LOKASI}.json?key=bd099c5825cbedb9aa934e255a81a5fc"
     request = requests.get(url)
     if request.status_code != 200:
