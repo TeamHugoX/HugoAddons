@@ -17,17 +17,17 @@
 from . import *
 
 
-@hugo_cmd(pattern="a ?(.*)")
+@hugo_cmd(pattern="a$")
 async def _(event):
     await eor(event, "**Assalamualaikum warahmatullahi wabarakatuh**")
 
 
-@hugo_cmd(pattern="w ?(.*)")
+@hugo_cmd(pattern="w$")
 async def _(event):
     await eor(event, "**Waalaikumsalam warahmatullahi wabarakatuh**")
 
 
-@hugo_cmd(pattern="k ?(.*)")
+@hugo_cmd(pattern="k$")
 async def _(event):
     await eor(event, "**Shalom Aleichem**")
     
