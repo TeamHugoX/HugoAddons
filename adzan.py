@@ -1,14 +1,15 @@
 # Hugo - Userbot
 # 2021 copyright (C)
 
-import request
-from . import *
-
 """
 **༄** Commands Available -
 • `{i}adzan (city)`
    Seeing the time for the call to prayer, prayer.
 """
+
+import requests
+from . import *
+
 
 @hugo_cmd(pattern="adzan$")
 async def get_adzan(hg):
