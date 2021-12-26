@@ -37,7 +37,7 @@ async def hello_world_example(event):
 If Your plugin need any additional requirements, it can be added to <a href="https://github.com/TeamHugoX/HugoAddons/blob/main/addons.txt">addons.txt
 
 ## Special thanks 💕
-- [OMGHelo](https://github.com/OMGHelo) : Contributors and Hugo Dev
+- [OMGHelo](https://github.com/OMGHelo) : Contributors and Dev
 - [Ultroid](https://github.com/TeamUltroid/Ultroid) : Base code
 - And all Dev Repositories Userbot
 
