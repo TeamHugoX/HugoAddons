@@ -23,12 +23,12 @@ async def get_adzan(hg):
         )
     result = json.loads(request.text)
     catresult = f"**Prayer Times Today:**"
-                 "**📆 Date:** `{result['items'][0]['date_for']}`"
-                 "**📍 City:*** `{result['query']}` | `{result['country']}`"
-                 "**Shurooq:** `{result['items'][0]['shurooq']}`"
-                 "**Fajr:** `{result['items'][0]['fajr']}`"
-                 "**Dhur:** `{result['items'][0]['dhuhr']}`"
-                 "**Asr:** `{result['items'][0]['asr']}`"
-                 "**Maghrib:** `{result['items'][0]['maghrib']}`"
-                 "**Isha:** `{result['items'][0]['isha']}`"
+                f"**📆 Date:** `{result['items'][0]['date_for']}`"
+                f"**📍 City:*** `{result['query']}` | `{result['country']}`"
+                f"**Shurooq:** `{result['items'][0]['shurooq']}`"
+                f"**Fajr:** `{result['items'][0]['fajr']}`"
+                f"**Dhur:** `{result['items'][0]['dhuhr']}`"
+                f"**Asr:** `{result['items'][0]['asr']}`"
+                f"**Maghrib:** `{result['items'][0]['maghrib']}`"
+                f"**Isha:** `{result['items'][0]['isha']}`"
     await eor(hg, catresult)
