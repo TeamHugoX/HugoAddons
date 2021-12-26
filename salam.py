@@ -4,10 +4,10 @@
 
 """
 **༄** Commands Available -
-• `{i}a`
+• `{i}p`
    Saying Islamic greetings.
 
-• `{i}w`
+• `{i}y`
    Responding to Islamic greetings.
 
 • `{i}k`
@@ -17,12 +17,12 @@
 from . import *
 
 
-@hugo_cmd(pattern="a ?(.*)")
+@hugo_cmd(pattern="p ?(.*)")
 async def _(event):
     await eor(event, "**Assalamualaikum warahmatullahi wabarakatuh**")
 
 
-@hugo_cmd(pattern="w ?(.*)")
+@hugo_cmd(pattern="y ?(.*)")
 async def _(event):
     await eor(event, "**Waalaikumsalam warahmatullahi wabarakatuh**")
 
