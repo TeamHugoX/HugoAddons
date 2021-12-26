@@ -11,7 +11,7 @@ import requests
 from . import *
 
 
-@hugo_cmd(pattern="adzan(?:\s|$)([\s\S]*)")
+@hugo_cmd(pattern="adzan ?(.*)")
 async def get_adzan(adzan):
     "Shows you the Islamic prayer times of the given city name"
     input_str = adzan.pattern_match.group(1)
@@ -33,4 +33,4 @@ async def get_adzan(adzan):
             \n<b>Maghrib : </b><code>{result['items'][0]['maghrib']}</code>\
             \n<b>Isha : </b><code>{result['items'][0]['isha']}</code>\
     "
-    await eor(adzan, catresult, "html")
+    await eor(adzan, catresult)
