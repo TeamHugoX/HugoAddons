@@ -23,14 +23,17 @@ async def get_adzan(adzan):
             adzan, f"**Can't Find City** `{LOCATION}`", 120
         )
     result = json.loads(request.text)
-    catresult = f"<b>Jadwal Shalat Hari Ini:</b>\
-            \n<b>📆 Date </b><code>{result['items'][0]['date_for']}</code>\
-            \n<b>📍 City</b> <code>{result['query']}</code> | <code>{result['country']}</code>\
-            \n\n<b>Shurooq  : </b><code>{result['items'][0]['shurooq']}</code>\
-            \n<b>Fajr : </b><code>{result['items'][0]['fajr']}</code>\
-            \n<b>Dhuhr  : </b><code>{result['items'][0]['dhuhr']}</code>\
-            \n<b>Asr  : </b><code>{result['items'][0]['asr']}</code>\
-            \n<b>Maghrib : </b><code>{result['items'][0]['maghrib']}</code>\
-            \n<b>Isha : </b><code>{result['items'][0]['isha']}</code>\
-    "
+    catresult = f"""
+**Prayer Times Today:**
+            
+**📆 Date** `{result['items'][0]['date_for']}`
+**📍 City** `{result['query']}` | `{result['country']}`
+
+**Shurooq:** `{result['items'][0]['shurooq']}`
+**Fajr:** `{result['items'][0]['fajr']}`
+**Dhuhr:** `{result['items'][0]['dhuhr']}`
+**Asr:** `{result['items'][0]['asr']}`
+**Maghrib:** `{result['items'][0]['maghrib']}`
+**Isha:** `{result['items'][0]['isha']}`
+"""
     await eor(adzan, catresult)
