@@ -21,7 +21,7 @@ And if you want to add credit, please add it as below
 
 <kbd>This Example Works Everywhere. (e.g. Groups, Personal Chats ...)</kbd>
 ```python
-@hugo_cmd(pattern="hoi")
+@hugo_cmd(pattern="hello")
 async def hello_world_example(event):
     # As telethon is an asyncio based lib, you will have to use `async`/`await` Syntax.
     await event.reply("Hello **World**.")
@@ -29,7 +29,7 @@ async def hello_world_example(event):
 
 <kbd>This Example Works Only In Groups.</kbd>
 ```python
-@hugo_cmd(pattern="hoi", groups_only=True,)
+@hugo_cmd(pattern="hello", groups_only=True,)
 async def hello_world_example(event):
     await event.reply("Hello **World**.")
 ```
